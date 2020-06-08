@@ -86,7 +86,7 @@ L.RaidWarnColor_4 			= "顏色4"
 L.InfoRaidWarning			= [[你可以對團隊警告的顏色及其位置進行設定。
 在這裡會顯示例如“玩家X中了Y效果”之類的資訊。]]
 L.ColorResetted 			= "該顏色設置已重置"
-L.ShowWarningsInChat 		= "在聊天視窗中顯示通告"
+L.ShowWarningsInChat 		= "在聊天視窗中顯示警告"
 L.WarningIconLeft 			= "左側顯示圖示"
 L.WarningIconRight 			= "右側顯示圖示"
 L.WarningIconChat 			= "在聊天視窗顯示圖示"
