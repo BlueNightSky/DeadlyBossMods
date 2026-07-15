@@ -5,7 +5,7 @@ local L
 --------------
 -- Brawlers --
 --------------
-L= DBM:GetModLocalization("Brawlers")
+L= DBM:GetModLocalization("BrawlersGeneral")
 
 L:SetGeneralLocalization({
 	name = "Бойцовская гильдия: Общее"
@@ -14,20 +14,39 @@ L:SetGeneralLocalization({
 L:SetWarningLocalization({
 	warnQueuePosition2	= "Ваша позиция в очереди: %d",
 	specWarnYourNext	= "Вы следующие!",
-	specWarnYourTurn	= "Ваш выход!"
+	specWarnYourTurn	= "Ваш выход!",
+	specWarnRumble		= "Разборка!"
 })
 
 L:SetOptionLocalization({
-	warnQueuePosition2	= "Показывать вашу текущию позицию в очереди",
-	specWarnYourNext	= "Спец-предупреждение, когда подходит ваша очередь сражаться",
-	specWarnYourTurn	= "Спец-предупреждение о начале вашего боя",
-	SpectatorMode		= "Отображать предупреждения/таймеры во время просмотра боев<br/>(Персональные 'спец-предупреждения' зрителям не отображаются)",
-	SpeakOutQueue		= "Объявлять голосом вашу текущую позицию в очереди"
+	warnQueuePosition2	= "Показывать Вашу текущую позицию в очереди",
+	specWarnYourNext	= "Показывать спецпредупреждение, когда подходит Ваша очередь сражаться",
+	specWarnYourTurn	= "Показывать спецпредупреждение о начале Вашего боя",
+	specWarnRumble		= "Показывать спецпредупреждение, когда кто-то начинает разборку",
+	SpectatorMode		= "Отображать предупреждения/таймеры во время просмотра боев<br/>Персональные 'спецпредупреждения' зрителям не отображаются",
+	SpeakOutQueue		= "Объявлять голосом Вашу текущую позицию в очереди",
+	NormalizeVolume2	= "Автоматически нормализовать громкость звукового канала DIALOG в соответствии с громкостью звукового канала SFX в зоне Бойцовской гильдии, чтобы крики были не такими громкими."
 })
 
 L:SetMiscLocalization({
 	Bizmo			= "Бизмо",--Альянс
 	Bazzelflange	= "Босси Кософланж",--Орда
+	--Alliance pre berserk
+	BizmoIgnored	= "У нас нет целой ночи. Поторопитесь уже!",
+	BizmoIgnored2	= "Вы чувствуете запах дыма?",
+	BizmoIgnored3	= "Я думаю, пришло время объявить этот бой.",
+	BizmoIgnored4	= "Здесь становится жарко? Или это только у меня?",
+	BizmoIgnored5	= "Приближается огонь!",
+	BizmoIgnored6	= "Я думаю, что мы видели уже достаточно. Я прав?",
+	BizmoIgnored7	= "Знаете, у нас есть целый список людей, которые хотят драться.",
+	--Horde pre berserk
+	BazzelIgnored	= "Ребята! Поторопитесь уже!",
+	BazzelIgnored2	= "Ооо... Я чувствую запах дыма...",
+	BazzelIgnored3	= "Время почти вышло!",
+	BazzelIgnored4	= "Здесь становится жарко?",
+	BazzelIgnored5	= "Огонь приближается!",
+	BazzelIgnored6	= "Давайте продолжим движение!",
+	BazzelIgnored7	= "Хорошо, хорошо. У нас тут очередь, знаете ли.",
 	--I wish there was a better way to do this....so much localizing. :(
 	Rank1			= "1-го ранга",
 	Rank2			= "2-го ранга",
@@ -37,10 +56,11 @@ L:SetMiscLocalization({
 	Rank6			= "6-го ранга",
 	Rank7			= "7-го ранга",
 	Rank8			= "8-го ранга",
-	Rank9			= "9-го ранга",
-	Rank10			= "10-го ранга",
+--	Rank9			= "9-го ранга",
+--	Rank10			= "10-го ранга",
+	Rumbler			= "Разборка",
 	Proboskus		= "Ух ты!... Мне тебя жаль, но, похоже, тебе придется сразиться с Носатиком.",--Альянс
-	Proboskus2		= "Ha ha ha! What bad luck you have! It's Proboskus! Ahhh ha ha ha! I've got twenty five gold that says you die in the fire!"--Орда
+	Proboskus2		= "Ха-ха-ха! Какая у вас плохая удача! Это Носатик! Аххх ха-ха-ха! У меня есть двадцать пять золотых, в которых написано, что ты умрешь в огне!"--Орда
 })
 
 ------------
@@ -65,6 +85,10 @@ L:SetOptionLocalization({
 	SetIconOnBlat	= "Устанавливать метку (череп) на настоящего Блэт"
 })
 
+L:SetMiscLocalization({
+	Sand			= "Песок"
+})
+
 ------------
 -- Rank 3 --
 ------------
@@ -81,10 +105,6 @@ L= DBM:GetModLocalization("BrawlRank4")
 
 L:SetGeneralLocalization({
 	name = "Бойцовская гильдия: 4 ранг"
-})
-
-L:SetOptionLocalization({
-	SetIconOnDominika	= "Устанавливать метку (череп) на настоящую Доминику Иллюзионистку"
 })
 
 ------------
@@ -114,13 +134,14 @@ L:SetGeneralLocalization({
 	name = "Бойцовская гильдия: 7 ранг"
 })
 
+--[[
 ------------
 -- Rank 8 --
 ------------
 L= DBM:GetModLocalization("BrawlRank8")
 
 L:SetGeneralLocalization({
-	name = "Бойцовская гильдия: 8 ранг"
+	name = "Brawlers: Rank 8"
 })
 
 ------------
@@ -129,11 +150,21 @@ L:SetGeneralLocalization({
 L= DBM:GetModLocalization("BrawlRank9")
 
 L:SetGeneralLocalization({
-	name = "Бойцовская гильдия: 9 ранг"
+	name = "Brawlers: Rank 9"
+})
+--]]
+
+-------------
+-- Brawlers: Rumble --
+-------------
+L= DBM:GetModLocalization("BrawlRumble")
+
+L:SetGeneralLocalization({
+	name = "Бойцовская гильдия: Разборка"
 })
 
 -------------
--- Rares 1 --
+-- Brawlers: Legacy --
 -------------
 L= DBM:GetModLocalization("BrawlLegacy")
 
@@ -146,7 +177,7 @@ L:SetOptionLocalization({
 })
 
 -------------
--- Rares 2 --
+-- Brawlers: Challenges --
 -------------
 L= DBM:GetModLocalization("BrawlChallenges")
 
@@ -160,11 +191,11 @@ L:SetWarningLocalization({
 
 L:SetOptionLocalization({
 	ArrowOnBoxing	= "Показывать стрелку DBM во время $spell:140868, $spell:140862 и $spell:140886",
-	specWarnRPS			= "Спец-предупреждение что использовать для $spell:141206"
+	specWarnRPS		= "Показывать спецпредупреждение, что использовать для $spell:141206"
 })
 
 L:SetMiscLocalization({
-	rock			= "камень",
-	paper			= "бумага",
-	scissors		= "ножницы"
+	rock			= "Камень",
+	paper			= "Бумага",
+	scissors		= "Ножницы"
 })
