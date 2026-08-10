@@ -1,18 +1,51 @@
 package-as: DBM-Core
+changelog-title: DBM - Core
+
+externals:
+  Libs/CallbackHandler-1.0: https://repos.wowace.com/wow/callbackhandler/trunk/CallbackHandler-1.0
+  Libs/ChatThrottleLib: svn://svn.wowace.com/wow/chatthrottlelib/mainline/trunk
+  Libs/LibChatAnims: https://repos.wowace.com/wow/libchatanims/trunk/LibChatAnims
+  Libs/LibDBIcon-1.0: https://repos.wowace.com/wow/libdbicon-1-0/trunk/LibDBIcon-1.0
+  Libs/LibDurability: https://repos.wowace.com/wow/libdurability/trunk/LibDurability
+  Libs/LibLatency: https://repos.wowace.com/wow/liblatency/trunk/LibLatency
+  Libs/LibKeystone: https://github.com/BigWigsMods/LibKeystone.git/LibKeystone
+  Libs/LibSharedMedia-3.0: https://repos.wowace.com/wow/libsharedmedia-3-0/trunk/LibSharedMedia-3.0
+  Libs/LibStub: https://repos.wowace.com/wow/libstub/trunk
+  Libs/LibDataBroker-1.1: https://github.com/tekkub/libdatabroker-1-1
+  Libs/LibDeflate: https://github.com/SafeteeWoW/LibDeflate
+  Libs/LibSerialize: https://github.com/rossnichols/LibSerialize
+  Libs/LibSpecialization: https://github.com/BigWigsMods/LibSpecialization.git/LibSpecialization
+  Libs/LibDropDownMenu: https://github.com/HizurosWoWAddOns/LibDropDownMenu
+  Libs/LibCustomGlow-1.0: https://github.com/Stanzilla/LibCustomGlow
+  DBM-VPVEM: https://github.com/DeadlyBossMods/DBM-Voicepack-VEM
+
+ignore:
+  - Libs/ChatThrottleLib/ChatThrottleLib.toc
+  - Libs/ChatThrottleLib/ChatThrottleLib.xml
+  - Libs/ChatThrottleLib/README.txt
+  - Libs/LibDeflate/docs
+  - Libs/LibDeflate/examples
+  - Libs/LibDeflate/LibDeflate.toc
+  - Libs/LibDeflate/README.md
+  - Libs/LibDeflate/CONTRIBUTING.md
+  - Libs/LibDeflate/changelog.md
+  - Libs/LibDropDownMenu/README.md
+  - Libs/LibStub/tests
+  - Libs/LibDataBroker-1.1/README.textile
+  - DBM-VPVEM/README.md
+  - DBM-Test/README.md
+  - DBM-Core/Tools
+
 enable-nolib-creation: no
 
 move-folders:
-    DBM-Core/DBM-Brawlers: DBM-Brawlers
-    DBM-Core/DBM-DefaultSkin: DBM-DefaultSkin
-    DBM-Core/DBM-DMF: DBM-DMF
-    DBM-Core/DBM-GUI: DBM-GUI
-    DBM-Core/DBM-StatusBarTimers: DBM-StatusBarTimers
-    DBM-Core/DBM-WorldEvents: DBM-WorldEvents
-    DBM-Core/DBM-Party-BfA: DBM-Party-BfA
-    DBM-Core/DBM-Azeroth-BfA: DBM-Azeroth-BfA
-    DBM-Core/DBM-Uldir: DBM-Uldir
-    DBM-Core/DBM-CrucibleofStorms: DBM-CrucibleofStorms
-    DBM-Core/DBM-ZuldazarRaid: DBM-ZuldazarRaid
-    DBM-Core/DBM-EternalPalace: DBM-EternalPalace
-    DBM-Core/DBM-Core: DBM-Core
-
+  DBM-Core/DBM-Brawlers: DBM-Brawlers
+  DBM-Core/DBM-DMF: DBM-DMF
+  DBM-Core/DBM-Midnight: DBM-Midnight
+  DBM-Core/DBM-Raids-Midnight: DBM-Raids-Midnight
+  DBM-Core/DBM-Lairs-Midnight: DBM-Lairs-Midnight
+  DBM-Core/DBM-Core: DBM-Core
+  DBM-Core/DBM-GUI: DBM-GUI
+  DBM-Core/DBM-StatusBarTimers: DBM-StatusBarTimers
+  DBM-Core/DBM-VPVEM/DBM-VPVEM: DBM-VPVEM
+  DBM-Core/DBM-Test: DBM-Test

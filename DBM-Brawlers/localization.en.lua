@@ -3,7 +3,7 @@ local L
 --------------
 -- Brawlers --
 --------------
-L= DBM:GetModLocalization("Brawlers")
+L= DBM:GetModLocalization("BrawlersGeneral")
 
 L:SetGeneralLocalization({
 	name = "Brawlers: General"
@@ -23,7 +23,7 @@ L:SetOptionLocalization({
 	specWarnRumble		= "Show special warning when someone starts a Rumble",
 	SpectatorMode		= "Show warnings/timers when spectating fights<br/>(Personal 'Special Warning' messages not shown to spectators)",
 	SpeakOutQueue		= "Count out your number in the queue when it updates",
-	NormalizeVolume		= "Automatically normalize the DIALOG sound channel volume to match SFX sound channel volume when in Brawlers area so that cheers aren't so loud."
+	NormalizeVolume2	= "Automatically normalize the DIALOG sound channel volume to match SFX sound channel volume when in Brawlers area so that cheers aren't so loud."
 })
 
 L:SetMiscLocalization({

@@ -3,7 +3,6 @@ local L		= mod:GetLocalizedStrings()
 
 mod:SetRevision("@file-date-integer@")
 --mod:SetModelID(28115)
-mod:SetZone()
 mod:SetUsedIcons(8)
 
 mod:RegisterEvents(
@@ -19,14 +18,14 @@ local warnPyroblast				= mod:NewCastAnnounce(33975, 3)--Sanoriak
 local warnFireWall				= mod:NewSpellAnnounce(132666, 4)--Sanoriak
 local warnDarkOutpour			= mod:NewSpellAnnounce(291394, 4)--Ouroboros
 
-local specWarnFireWall			= mod:NewSpecialWarningDodge(132666, nil, nil, nil, 2, 2)--Sanoriak
-local specWarnPyroblast			= mod:NewSpecialWarningInterrupt(33975, nil, nil, nil, 1, 2)--Sanoriak
-local specWarnDarkOutpour		= mod:NewSpecialWarningDodge(291394, nil, nil, nil, 2, 2)--Ouroboros
+local specWarnFireWall			= mod:NewSpecialWarningDodge(132666, nil, nil, nil, 2, 2, nil, nil, "watchstep")--Sanoriak
+local specWarnPyroblast			= mod:NewSpecialWarningInterrupt(33975, nil, nil, nil, 1, 2, nil, nil, "kickcast")--Sanoriak
+local specWarnDarkOutpour		= mod:NewSpecialWarningDodge(291394, nil, nil, nil, 2, 2, nil, nil, "watchstep")--Ouroboros
 
 --local timerFirewallCD			= mod:NewCDTimer(17, 132666, nil, nil, nil, 3)--Sanoriak
 local timerDarkOutpourCD		= mod:NewCDTimer(43.5, 291394, nil, nil, nil, 3)--Ouroboros
 
-local brawlersMod = DBM:GetModByName("Brawlers")
+local brawlersMod = DBM:GetModByName("BrawlersGeneral")
 --local DominikaGUID = 0
 
 function mod:SPELL_CAST_START(args)
@@ -80,7 +79,7 @@ end
 
 function mod:PLAYER_TARGET_CHANGED()
 	if self.Options.SetIconOnDominika and not DBM.Options.DontSetIcons and UnitGUID("target") == DominikaGUID and GetRaidTargetIndex("target") ~= 8 then
-		SetRaidTarget("target", 8)
+		self:SetIcon("target", 8)
 	end
 end
 --]]
